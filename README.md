@@ -11,7 +11,7 @@ You don't need to know Docker or Prometheus beforehand to solve this assignment,
   - Read Prometheus installation with Docker: https://prometheus.io/docs/prometheus/latest/installation/
   - Install Docker and docker-compose on your machine and run following commands,
     ```sh
-    docker pull infracloudio/csvserver:latest
+    docker pull indorenilesh/csvserver:latest
     docker pull prom/prometheus:v2.22.0
     ```
   - Clone this repository to your machine. (**Don't fork it**).
@@ -30,7 +30,7 @@ You don't need to know Docker or Prometheus beforehand to solve this assignment,
   - If you need more time or are stuck at some point, don't hesitate to reach out to us.
 
 ## Part I
-  1. Run the container image `infracloudio/csvserver:latest` in background and check if it's running.
+  1. Run the container image `indorenilesh/csvserver:latest` in background and check if it's running.
   2. If it's failing then try to find the reason, once you find the reason, move to the next step.
   3. Write a bash script `gencsv.sh` to generate a file named `inputFile` whose content looks like:
      ```csv
@@ -83,7 +83,7 @@ The application should be accessible at http://localhost:9393, it should have th
 
 ## Part III
   0. Delete any containers running from the last part.
-  1. Add Prometheus container (`prom/prometheus:v2.22.0`) to the docker-compose.yaml form part II.
+  1. Add Prometheus container (`prom/prometheus:v2.22.0`) to the docker-compose.yaml from part II.
   2. Configure Prometheus to collect data from our application at `<application>:<port>/metrics` endpoint. (Where the `<port>` is the port from I.5)
   3. Make sure that Prometheus is accessible at http://localhost:9090 on the host.
   4. Type `csvserver_records` in the query box of Prometheus. Click on Execute and then switch to the Graph tab.
